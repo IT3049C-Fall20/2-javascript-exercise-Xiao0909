@@ -6,9 +6,30 @@
  *    if the value was provided was a number but doesn't match any of those criteria, return the number as is.
  *    if no number was provided or if the value provided wasn't a number (hint: typeof), return false
  */
-function fizzBuzz(num) {
-  
+
+function fizzBuzz (num, result){
+  if (typeof num === 'number'){
+     if (num%5 === 0 && num%3 ===0)
+    {
+      result = 'fizzbuzz';
+    }
+    else if(num%3 === 0){
+      result = 'fizz';
+    }
+    else if(num%5 === 0){
+      result = 'buzz';
+    }
+    else{
+      result = num;
+    }
+  }
+  else{
+    result = false;
+  }
+  return result;
 }
+
+
 
 module.exports = {
   fizzBuzz
